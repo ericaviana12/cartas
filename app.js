@@ -17,4 +17,15 @@ function sortear() {
     // console.clear()
     // console.log(`${faceSorteada} de ${nipeSorteado}`) // Exibir a face e nipe sorteados
 
+    // Renderizar o canto superior esquerdo da carta
+    // A linha abaixo adiciona a div identificada como 'supEsq' a face e o nipe sorteado e também tags <div> adicionais
+    document.getElementById('supEsq').innerHTML = `<div>${faceSorteada}</div> <div>${nipeSorteado}</div>`
+
+    // Renderizar o centro da carta
+    let cc = document.getElementById('centroCarta')
+    cc.innerHTML = `${nipeSorteado}`
+
+    // Renderizar o canto inferior direito da carta
+    // A linha abaixo adiciona a div identificada como 'infDir' a face e o nipe sorteado e também tags <div> adicionais
+    document.getElementById('infDir').innerHTML = `<div>${faceSorteada}</div> <div>${nipeSorteado}</div>`
 }
