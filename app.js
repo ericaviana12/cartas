@@ -33,9 +33,17 @@ function sortear() {
 
     // Renderizar o centro da carta
     let cc = document.getElementById('centroCarta')
-    cc.innerHTML = `${nipeSorteado}`
+    if (faceSorteada === 'J') {
+        cc.innerHTML = `<img src="./img/valete.png">`
+    } else if (faceSorteada === 'Q') {
+        cc.innerHTML = `<img src="./img/dama.png">`
+    } else if (faceSorteada === 'K') {
+        cc.innerHTML = `<img src="./img/rei.png">`
+    } else {
+            cc.innerHTML = `${nipeSorteado}`
     // A linha abaixo muda o CSS referente a tag identificada
     document.getElementById('centroCarta').style.color = cor
+    }
 
     // Renderizar o canto inferior direito da carta
     // A linha abaixo adiciona a div identificada como 'infDir' a face e o nipe sorteado e também tags <div> adicionais
